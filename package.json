@@ -12,7 +12,7 @@
   "author": "'' <ar>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/BazaarDog/bazaar-dog-offline.git"
   },
   "license": "MIT",
   "engines": {

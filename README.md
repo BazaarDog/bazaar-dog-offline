@@ -5,8 +5,21 @@
 [![Coveralls](https://img.shields.io/coveralls/BazaarDog/bazaar-dog-offline.svg)](https://coveralls.io/github/BazaarDog/bazaar-dog-offline)
 [![Dev Dependencies](https://david-dm.org/BazaarDog/bazaar-dog-offline/dev-status.svg)](https://david-dm.org/BazaarDog/bazaar-dog-offline?type=dev)
 
-A this is a caching search engine for browsing OpenBazaar while offline. It uses [ndx](https://github.com/localvoid/ndx) for full text search and
-[localForage](https://github.com/localForage/localForage) as a cache API 
+A cachy search engine for browsing OpenBazaar while offline. It uses [ndx](https://github.com/localvoid/ndx) for full text search and
+[localForage](https://github.com/localForage/localForage) as a cache API. It can cache results from other search providers as
+well as listings browsed from the vendor's `listing.json` file on the OpenBazaar network.
+
+It cannot (ATM) cache a full listing if loaded directly.
+
+By default it loads the top 2000 active listings (legal in USA) from BazaarDog (~5 MB) on first boot. After that, it will not bootstrap
+again and operates completely offline, only caching what is passed to it from the client.
+ 
+**Be Careful.** **No Scam protection.** **No filtering after bootstrap.** 
+
+Beyond bootstrapping, any content that is cached or returned originating from a third-party search 
+ provider or the OpenBazaar ipfs network is entirely the responsibility of the user. This library is 
+ intended to work entirely on an end-user's device and not contact the outside world after bootstrapping.
+
 
 
 <img src="https://github.com/BazaarDog/bazaar-dog-offline/raw/master/assets/hi_res_logo_offline.png">
