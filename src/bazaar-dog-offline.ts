@@ -20,7 +20,7 @@ export interface PubKeys {
   bitcoin: string
 }
 
-export interface peerID {
+export interface peerId {
   peerID: string
   pubkeys: PubKeys
   bitcoinSig: string
@@ -83,7 +83,7 @@ export interface ListingDetailMetadata {
 
 export interface ListingFull {
   slug: string
-  vendorID: peerID
+  vendorID: peerId
   metadata: ListingDetailMetadata
   item: ListingDetailItem
   shippingOptions: Array<ListingDetailShippingOption>
@@ -434,7 +434,7 @@ export default class CachingSearchAPI {
   }
 
   async getResults(params: any): Promise<SearchResults> {
-    //console.log(JSON.stringify(params));
+    // console.log(JSON.stringify(params));
 
     let resultIds: Array<any> = []
     let searchTerm: string = ''
@@ -447,7 +447,7 @@ export default class CachingSearchAPI {
         searchTerm = 'Qm'
       }
       resultIds = this.searchApi.search(searchTerm)
-      //console.log("Searching for " + searchTerm);
+      // console.log("Searching for " + searchTerm);
     } catch (error) {
       resultIds = await this.searchApi.search('Qm')
       console.log('Error in search, searching for nothing ' + error)
@@ -466,14 +466,14 @@ export default class CachingSearchAPI {
     if (params['nsfw'] === true) {
       nsfw = true || false
     }
-    //console.log("nsfw was :" + nsfw);
+    // console.log("nsfw was :" + nsfw);
 
     let acceptedCurrencies: string = ''
     if (params['acceptedCurrencies'] !== undefined) {
       acceptedCurrencies = params['acceptedCurrencies']
     }
 
-    //console.log("acceptedCurrencies was :" + acceptedCurrencies);
+    // console.log("acceptedCurrencies was :" + acceptedCurrencies);
 
     resultIdSlice.map(key => {
       cachePromises.push(this.store.getItem(key.docId))
@@ -494,7 +494,7 @@ export default class CachingSearchAPI {
             console.error('Failed getting result from storage: ' + error)
           }
         })
-      //console.log("length of slice..." + results.length);
+      // console.log("length of slice..." + results.length);
 
       let r: SearchResults = {
         results: results,
@@ -538,7 +538,7 @@ export default class CachingSearchAPI {
 
   getFlatListingFromListing(l: Listing, v: Profile) {
     console.error('Caching a listing from the full json is not supported')
-    //return this.mapListingToFlat(l,v);
+    // return this.mapListingToFlat(l,v);
   }
 
   mapListingToFlat(l: Listing, v: Profile) {
