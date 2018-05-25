@@ -1,0 +1,88 @@
+{
+  "listing": {
+    "slug": "light-bulb",
+    "vendorID": {
+      "peerID": "QmTBVgfJ4jZdyUhdHYi73oBjupSHv7bRNjMcVYupC13sJh",
+      "handle": "",
+      "pubkeys": {
+        "identity": "CAESIH1FH/3+kua7ydaxls42UU6VLPLpFqLO0TOi07UqAjuM",
+        "bitcoin": "A2fvpJFnXvMonV0XE2l3oaUEbJWpAr+T3M6zg6rFrjZQ"
+      },
+      "bitcoinSig": "MEQCIE0vuAyuIW03P1zdxji+EtFXmlCJydzHLrHYqKqOaHoJAiBrvNc/pGov/5PdUU01VqVc2JQN4fakNJU4Jpf2glvwkA=="
+    },
+    "metadata": {
+      "version": 2,
+      "contractType": "PHYSICAL_GOOD",
+      "format": "FIXED_PRICE",
+      "expiry": "2037-12-31T05:00:00.000Z",
+      "acceptedCurrencies": [
+        "BCH"
+      ],
+      "pricingCurrency": "USD",
+      "language": "",
+      "escrowTimeoutHours": 1080,
+      "coinType": "",
+      "coinDivisibility": 0
+    },
+    "item": {
+      "title": "Light Bulb",
+      "description": "Edison-style light bulb.<p><br></p><p>120V 60Hz USA<br></p><p><br></p><p><br></p><p></p>",
+      "processingTime": "",
+      "price": 89,
+      "nsfw": false,
+      "tags": [
+      ],
+      "images": [
+        {
+          "filename": "light_bulb_3.JPG",
+          "original": "zdj7WWumUBsWZHmH9jc4FGFMyvfJq6umdznfKyUgX1KDezbDP",
+          "large": "zb2rhgkBPbDwvYJPYsn3nkHJqgEVvcJmiQGdLciSGuWJm9SHe",
+          "medium": "zb2rhnqXuBqi99PJjBdduY1A67GTSsGSsS3o3xpJNRTndmzUD",
+          "small": "zb2rhkZWH59gZM2tytjG2w6BMVaCqvchUVWJcenmjLjyfnMiz",
+          "tiny": "zb2rhdwJBemyHKYkEAxBSKcv95mJFA3YEPRYDD9H8HCnx4d87"
+        }
+      ],
+      "categories": [
+        "Lighting"
+      ],
+      "grams": 0,
+      "condition": "USED_EXCELLENT",
+      "options": [
+      ],
+      "skus": [
+        {
+          "productID": "filaments",
+          "surcharge": 0,
+          "quantity": 1
+        }
+      ]
+    },
+    "shippingOptions": [
+      {
+        "name": "USPS",
+        "type": "FIXED_PRICE",
+        "regions": [
+          "UNITED_STATES"
+        ],
+        "services": [
+          {
+            "name": "First Class",
+            "price": 410,
+            "estimatedDelivery": "5-10",
+            "additionalItemPrice": 0
+          }
+        ]
+      }
+    ],
+    "coupons": [
+    ],
+    "moderators": [
+      "QmamG5uQjRqrdxAxp4DJK4TLvs2Yet8Nuiztip4ALD7i1U",
+      "QmWdNQE9ndY4TWVBSMnj69NvX87F6bMAjwcafh8Jj1KjD9"
+    ],
+    "termsAndConditions": "",
+    "refundPolicy": ""
+  },
+  "hash": "zb2rhdetHc91YPxihqjP21mFEGj8zEdbw1QFoRyHpmRjzTfza",
+  "signature": "hga6glJMuKk7oOdrA6U0gDlGxsvCqm7BV3b1nf/JeC/S4VAfOoL3hXj54wpQvcTklKduDXbjpHWmNkYGcqfCBQ=="
+}

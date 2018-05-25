@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline Search</title>
+
+</head>
+
+<body>
+<input title="Search" id="input"><b> </b>
+
+<button id="clickme" type="button" title="Search" onclick="search()" value="Search">Search</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+<script>
+
+  require(['../dist/bazaar-dog-offline.umd.js'], function (bazaarDogOffline) {
+    params = {
+      "acceptedCurrencies": "BCH",
+      "nsfw": false,
+      "p":0,
+      "q":"*",
+      "ps":24
+    }
+    var CachingSearchAPI = bazaarDogOffline['default'];
+    var api = new CachingSearchAPI();
+    api.setup();
+
+    window.search = function () {
+      params['q'] = document.getElementById('input').value;
+      response = api.buildResponse(params).then(function(response){
+          console.log(JSON.stringify(response));
+        }
+      ).catch(function(err){
+          console.error("Search failed: "+ err);
+      });
+
+    };
+
+  });
+
+
+</script>
+</body>
+</html>
