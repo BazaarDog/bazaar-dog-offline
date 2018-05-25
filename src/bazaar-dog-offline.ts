@@ -342,7 +342,7 @@ export default class CachingSearchAPI {
               this.store.setItem(key, json[key])
             })
             return json
-          })
+          }).catch(function(err) { setTimeout(function() { throw err; }); });
         }
       })
       .catch(err => {
@@ -498,7 +498,8 @@ export default class CachingSearchAPI {
         total: results.length
       }
       return r
-    })
+    }).catch(function(err) { setTimeout(function() { throw err; }); });
+
   }
 
   async buildResponse(params: any): Promise<any> {
@@ -519,7 +520,8 @@ export default class CachingSearchAPI {
         options: options,
         sortBy: sortBy
       }
-    })
+    }).catch(function(err) { setTimeout(function() { throw err; }); });
+
   }
 
   cacheSearchResults(r: SearchResults) {

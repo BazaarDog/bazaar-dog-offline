@@ -40,19 +40,7 @@ describe('CachingSearchAPI test', () => {
     expect(l).toEqual(41)
   })
 
-  test('bootstrap from internet', async () => {
-    await fetch.mockResponseOnce(bootstrap.toJSON());
-    const emptyApi = new CachingSearchAPI();
-    await emptyApi.setup();
-    await emptyApi.store.ready();
-    await emptyApi.fetchBootstrap();
 
-    await emptyApi.buildIndex();
-    let l = await emptyApi.store.length();
-    console.log("Length of bootstrapped entities was : ", l);
-
-    expect(l).toBeGreaterThan(1000)
-  })
 
 
   test('return something reasonable no params', async () => {
