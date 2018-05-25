@@ -41,7 +41,7 @@ describe('CachingSearchAPI test', () => {
   })
 
   test('bootstrap from internet', async () => {
-    await fetch.mockResponseOnce(bootstrap);
+    await fetch.mockResponseOnce(bootstrap.toJSON());
     const emptyApi = new CachingSearchAPI();
     await emptyApi.setup();
     await emptyApi.store.ready();

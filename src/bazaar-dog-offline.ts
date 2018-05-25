@@ -324,10 +324,6 @@ export default class CachingSearchAPI {
     let numberOfKeys = await this.store.length()
     if (numberOfKeys < 2000) {
       this.cache = await this.fetchBootstrap(url)
-    } else {
-      console.log(
-        'Skipping bootstrap because there were over 2000 entries available'
-      )
     }
     await this.buildIndex()
 
@@ -372,11 +368,11 @@ export default class CachingSearchAPI {
             console.error('Error adding: ' + key + ' ' + error)
           }
         })
-        .catch(function(err) {
-          // This code runs if there were any errors
-          console.log(err)
-        })
+    }).catch(function (err) {
+      // This code runs if there were any errors
+      console.log(err)
     })
+
   }
 
   buildCheckbox(checked: boolean, label: string) {
@@ -392,7 +388,7 @@ export default class CachingSearchAPI {
 
   buildOptions(selected: string, options: any) {
     let x: Array<any> = []
-    Object.keys(options).forEach(function(key) {
+    Object.keys(options).forEach(function (key) {
       x.push({
         value: key,
         label: options[key],
@@ -526,27 +522,19 @@ export default class CachingSearchAPI {
     })
   }
 
-  cacheSearchResults(r:SearchResults){
-    for( let s of r.results){
-      // try {
-        const f = this.getFlatListingFromSearchResult(s);
-        this.store.setItem(f.id, f);
-        this.searchApi.add(f.id, f);
-      // } catch (error) {
-      //  console.error('Error adding: ' + key + ' ' + error)
-      // }
+  cacheSearchResults(r: SearchResults) {
+    for (let s of r.results) {
+      const f = this.getFlatListingFromSearchResult(s);
+      this.store.setItem(f.id, f);
+      this.searchApi.add(f.id, f);
     }
   }
 
-  cacheStoreListings(store:Array<Listing>, v:Profile){
-    for( let l of store){
-      // try {
-        const f = this.getFlatListingFromStoreListing(l, v);
-        this.store.setItem(f.id, f);
-        this.searchApi.add(f.id, f);
-      // } catch (error) {
-      //  console.error('Error adding: ' + key + ' ' + error)
-      // }
+  cacheStoreListings(store: Array<Listing>, v: Profile) {
+    for (let l of store) {
+      const f = this.getFlatListingFromStoreListing(l, v);
+      this.store.setItem(f.id, f);
+      this.searchApi.add(f.id, f);
     }
   }
 
