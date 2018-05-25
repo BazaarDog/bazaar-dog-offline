@@ -1,6 +1,6 @@
 {
-  "d3e6745b237968a380a0d89e2aaca903": {
-    "id": "d3e6745b237968a380a0d89e2aaca903",
+  "": {
+    "id": "",
     "peerID": "QmeSyTRaNZMD8ajcfbhC8eYibWgnSZtSGUp3Vn59bCnPWC",
     "slug": "the-bitcoin-block-clock-made-to-order",
     "title": "The Bitcoin Block Clock (made-to-order)",
@@ -20,11 +20,6 @@
   },
   "68e9d6c430bcea2ead7b51a6bfeda885": {
     "id": "68e9d6c430bcea2ead7b51a6bfeda885",
-    "peerID": "QmTBVgfJ4jZdyUhdHYi73oBjupSHv7bRNjMcVYupC13sJh",
-    "slug": "realforce-rgb",
-    "title": "'17 Topre Realforce RGB",
-    "description": "<p>Topre switches</p><p>Double shot caps</p><p><span>Individually addresable</span>&nbsp;actuation&",
-    "nsfw": false,
     "contractType": 0,
     "profileName": "Bazaar_Dog",
     "profileAvatar": "zb2rhjRXRRP43K38D8oXr7237uf98Hvzi5RQLCkebVxDucC35",
@@ -57,23 +52,6 @@
     "thumbnail": "zb2rhb97RsuusSdFjr4ZEBpACNUGkGMrxkQ39JUDEzWbYLANA"
   },
   "d8d1488cb77e23cf87de0d33965e5089": {
-    "id": "d8d1488cb77e23cf87de0d33965e5089",
-    "peerID": "QmZuTqFBi2cWFAREajSTxKf8YLZJ1fKzSG2q5xD9NdhaLe",
-    "slug": "test-matcha-gift-box-3-x-50g-jars",
-    "title": "Matcha Gift Box - 3 x 50g Jars",
-    "description": "<ul><li>Contains 3 yummy flavours</li><li>Original Matcha, Lemon Matcha and new Mint Matcha</li><li",
-    "nsfw": false,
-    "contractType": 0,
-    "profileName": "Pure Chimp",
-    "profileAvatar": "zb2rhee1TRzaMb4VZTQ1xmda6HVaQDxGfSXnZVG8EHinX3j2s",
-    "pricingCurrency": "GBP",
-    "acceptedCurrencies": [
-      "BCH"
-    ],
-    "price": 2995,
-    "ratingCount": 2,
-    "averageRating": 5.0,
-    "thumbnail": "zb2rhdDNLmhHgqsz9hr9UCt4GYw3BGWERtL2W5qhatWdSduVz"
   },
   "25b3bc520b49fc92caff282c8a9a9ca3": {
     "id": "25b3bc520b49fc92caff282c8a9a9ca3",
@@ -89,7 +67,6 @@
     "acceptedCurrencies": [
       "BCH"
     ],
-    "price": 6999,
     "ratingCount": 1,
     "averageRating": 5.0,
     "thumbnail": "zb2rheW3e4Du22sKXi72w7b1Aw1SZ2KGJ8Qsp7eGCBC6dEmd7"
@@ -105,21 +82,12 @@
     "profileName": "OpenBazaar Store",
     "profileAvatar": "zb2rhcLbHqq139K9r2DT1BPaqTdTVTSnmQnNzdb1BZpdbK4Zk",
     "pricingCurrency": "USD",
-    "acceptedCurrencies": [
-      "BTC"
-    ],
     "price": 400,
     "ratingCount": 4,
     "averageRating": 5.0,
     "thumbnail": "zb2rhcZAUhFMUmQBxYqTu4FhZHj6EJACe16pu8JU2ofUAL6ec"
   },
   "8469c89d26b4e1bf97b0967584372b8f": {
-    "id": "8469c89d26b4e1bf97b0967584372b8f",
-    "peerID": "QmcUDmZK8PsPYWw5FRHKNZFjszm2K6e68BQSTpnJYUsML7",
-    "slug": "openbazaar-t-shirt",
-    "title": "OpenBazaar T-Shirt",
-    "description": "<h1>OpenBazaar T-Shirt&nbsp;</h1><p><br></p><p>Show your support for decentralized markets and free",
-    "nsfw": false,
     "contractType": 0,
     "profileName": "OpenBazaar Store",
     "profileAvatar": "zb2rhcLbHqq139K9r2DT1BPaqTdTVTSnmQnNzdb1BZpdbK4Zk",

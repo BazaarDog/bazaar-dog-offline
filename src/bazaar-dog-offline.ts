@@ -526,9 +526,33 @@ export default class CachingSearchAPI {
     })
   }
 
+  cacheSearchResults(r:SearchResults){
+    for( let s of r.results){
+      // try {
+        const f = this.getFlatListingFromSearchResult(s);
+        this.store.setItem(f.id, f);
+        this.searchApi.add(f.id, f);
+      // } catch (error) {
+      //  console.error('Error adding: ' + key + ' ' + error)
+      // }
+    }
+  }
+
+  cacheStoreListings(store:Array<Listing>, v:Profile){
+    for( let l of store){
+      // try {
+        const f = this.getFlatListingFromStoreListing(l, v);
+        this.store.setItem(f.id, f);
+        this.searchApi.add(f.id, f);
+      // } catch (error) {
+      //  console.error('Error adding: ' + key + ' ' + error)
+      // }
+    }
+  }
+
   getFlatListingFromSearchResult(s: ListingSearchResult): ListingFlat {
-    let l = s.data
-    let v = s.relationships.vendor.data
+    let l = s.data;
+    let v = s.relationships.vendor.data;
     return this.mapListingToFlat(l, v)
   }
 

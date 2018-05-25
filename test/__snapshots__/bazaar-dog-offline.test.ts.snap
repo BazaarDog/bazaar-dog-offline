@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CachingSearchAPI test throw an error loading a full listing : [object Object] 1`] = `"received is not a function"`;
