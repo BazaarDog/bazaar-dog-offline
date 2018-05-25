@@ -9,6 +9,8 @@ A this is a caching search engine for browsing OpenBazaar while offline. It uses
 [localForage](https://github.com/localForage/localForage) as a cache API 
 
 
+<img src="https://github.com/BazaarDog/bazaar-dog-offline/raw/master/assets/hi_res_logo_offline.png">
+
 
 
 ### Usage

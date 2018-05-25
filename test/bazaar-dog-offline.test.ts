@@ -225,7 +225,5 @@ describe('CachingSearchAPI test', () => {
     expect(true).toBeTruthy()
   })
 
-  // load bad json
-
 
 })

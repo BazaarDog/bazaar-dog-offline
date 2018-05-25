@@ -369,7 +369,6 @@ export default class CachingSearchAPI {
           }
         })
     }).catch(function (err) {
-      // This code runs if there were any errors
       console.log(err)
     })
 
@@ -429,9 +428,7 @@ export default class CachingSearchAPI {
     }
   }
 
-  async getResults(params: any): Promise<SearchResults> {
-    // console.log(JSON.stringify(params));
-
+  async getResults(params: any): Promise<SearchResults|void> {
     let resultIds: Array<any> = []
     let searchTerm: string = ''
 
@@ -443,7 +440,6 @@ export default class CachingSearchAPI {
         searchTerm = 'Qm'
       }
       resultIds = this.searchApi.search(searchTerm)
-      // console.log("Searching for " + searchTerm);
     } catch (error) {
       resultIds = await this.searchApi.search('Qm')
       console.log('Error in search, searching for nothing ' + error)
@@ -462,14 +458,11 @@ export default class CachingSearchAPI {
     if (params['nsfw'] === true) {
       nsfw = true || false
     }
-    // console.log("nsfw was :" + nsfw);
 
     let acceptedCurrencies: string = ''
     if (params['acceptedCurrencies'] !== undefined) {
       acceptedCurrencies = params['acceptedCurrencies']
     }
-
-    // console.log("acceptedCurrencies was :" + acceptedCurrencies);
 
     resultIdSlice.map(key => {
       cachePromises.push(this.store.getItem(key.docId))
@@ -487,10 +480,10 @@ export default class CachingSearchAPI {
             let j = new ListingFlat(i)
             results.push(j.asSearchResult())
           } catch (error) {
-            console.error('Failed getting result from storage: ' + error)
+           setTimeout(function() { throw error; });
+           return [];
           }
         })
-      // console.log("length of slice..." + results.length);
 
       let r: SearchResults = {
         results: results,
@@ -528,7 +521,6 @@ export default class CachingSearchAPI {
     for (let s of r.results) {
       const f = this.getFlatListingFromSearchResult(s);
       this.store.setItem(f.id, f);
-      this.searchApi.add(f.id, f);
     }
   }
 
@@ -536,7 +528,6 @@ export default class CachingSearchAPI {
     for (let l of store) {
       const f = this.getFlatListingFromStoreListing(l, v);
       this.store.setItem(f.id, f);
-      this.searchApi.add(f.id, f);
     }
   }
 
@@ -552,7 +543,6 @@ export default class CachingSearchAPI {
 
   getFlatListingFromListing(l: Listing, v: Profile) {
     console.error('Caching a listing from the full json is not supported')
-    // return this.mapListingToFlat(l,v);
   }
 
   mapListingToFlat(l: Listing, v: Profile) {
