@@ -96,7 +96,7 @@ describe('CachingSearchAPI test', () => {
     const emptyApi = new CachingSearchAPI();
     await emptyApi.setup();
     let param = {q: '', nsfw: true, acceptedCurrencies: [''], p: 3, ps: 1}
-    emptyApi.store
+    await emptyApi.store
       .ready()
       .then(() => {
         emptyApi.cacheSearchResults(searchResults.results);
@@ -128,7 +128,7 @@ describe('CachingSearchAPI test', () => {
     const emptyApi = new CachingSearchAPI();
     await emptyApi.setup();
     let param = {q: '', nsfw: true, acceptedCurrencies: [''], p: 3, ps: 1}
-    emptyApi.store
+    await emptyApi.store
       .ready()
       .then(() => {
         emptyApi.cacheStoreListings(storeListngs, profile);
