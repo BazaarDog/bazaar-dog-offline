@@ -20,7 +20,7 @@ export interface PubKeys {
   bitcoin: string
 }
 
-export interface peerId {
+export interface PeerId {
   peerID: string
   pubkeys: PubKeys
   bitcoinSig: string
@@ -83,7 +83,7 @@ export interface ListingDetailMetadata {
 
 export interface ListingFull {
   slug: string
-  vendorID: peerId
+  vendorID: PeerId
   metadata: ListingDetailMetadata
   item: ListingDetailItem
   shippingOptions: Array<ListingDetailShippingOption>
